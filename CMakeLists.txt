@@ -4,4 +4,7 @@ project(cpp_project)
 
 # Add sub directories
 add_subdirectory(cpp_base)
-add_subdirectory(cpp_qt)
+
+if (WIN32)
+    add_subdirectory(cpp_qt)
+endif()
