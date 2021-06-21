@@ -1,12 +1,6 @@
 #include <iostream>
 #include <vector>
-
 #include "point.h"
-
-Point getPoint()
-{
-    return Point(3, 4);
-}
 
 int main()
 {

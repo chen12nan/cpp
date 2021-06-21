@@ -13,32 +13,19 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 # ----------------------------------------Windows-----------------------------
 # -rpath is not necessary. For windows, please remember to set path environment variable.
 # set path=%path%;dll_path_location. PS: must be the location of dll library.
-<<<<<<< HEAD
-if (NOT UNIX)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wl,-rpath=C:\\Qt\\Qt5.8.0\\5.8\\mingw53_32\\bin")
-endif()
 
-project(qt_test)
-
-if (NOT UNIX)
-    include_directories("C:\\Qt\\Qt5.8.0\\5.8\\mingw53_32\\include")
-    link_directories("C:\\Qt\\Qt5.8.0\\5.8\\mingw53_32\\lib")
-endif()
-
-=======
-
-if (NOT UNIX)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wl,-rpath=C:\\Qt\\Qt5.8.0\\5.8\\mingw53_32\\bin")
-endif()
+# if (NOT UNIX)
+#     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wl,-rpath=C:\\Qt\\Qt5.8.0\\5.8\\mingw53_32\\bin")
+# endif()
 
 
 project(qt_test)
 
 if (WIN32)
+    MESSAGE(STATUS "cmake cpp_qt  "  ${UNIX})
     include_directories("C:\\Qt\\Qt5.8.0\\5.8\\mingw53_32\\include")
     link_directories("C:\\Qt\\Qt5.8.0\\5.8\\mingw53_32\\lib")
 endif()
->>>>>>> 6e1963902e8f7a9ef6e00b493ff581f6184bce4a
 
 add_executable(${PROJECT_NAME} main.cpp)
 
