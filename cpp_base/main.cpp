@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <vector>
 
@@ -9,12 +8,22 @@ Point getPoint()
     return Point(3, 4);
 }
 
-int main(int argc, char *argv[])
+int main()
 {
-    std::cout << "Hello CMake" << std::endl;
+    std::cout << "Hello World" << __FILE__ << __FUNCTION__ << __LINE__ << std::endl;
 
-    Point point(3, 4);
-    // points.emplace_back({3, 4});
+    Point *points = new Point[3];
+    points[0].m_x = 0;
+    points[0].m_y = 100;
+    points[1].m_x = 1;
+    points[1].m_y = 100;
+    points[2].m_x = 2;
+    points[2].m_y = 100;
 
+    delete points;
+    std::cout << *points[1].p << std::endl;
+
+    std::cout << "hello world.\n"
+              << std::endl;
     return 0;
 }
