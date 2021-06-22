@@ -1,0 +1,7 @@
+docker commit 会越来越大， 可以通过以下方法制定docker images
+https://my.oschina.net/u/4309066/blog/3411462
+
+docker 可以使用ssh登录。 通过映射端口的方式启动， 然后用ssh root@localhost -p PORT
+https://www.cnblogs.com/mengw/p/11413461.html
+
+docker container prune  # 清除所有的docker启动记录
