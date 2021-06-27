@@ -1,0 +1,1087 @@
+(WT_CONNECTION_IMPL) $5 = {
+    iface = {
+      close = 0x00000001001d60e0 (libwiredtiger-10.0.1.dylib`__conn_close at conn_api.c:1095)
+      debug_info = 0x00000001001d6cb0 (libwiredtiger-10.0.1.dylib`__conn_debug_info at conn_api.c:1198)
+      reconfigure = 0x00000001001d7390 (libwiredtiger-10.0.1.dylib`__conn_reconfigure at conn_api.c:1241)
+      get_home = 0x00000001001d77f0 (libwiredtiger-10.0.1.dylib`__conn_get_home at conn_api.c:1054)
+      configure_method = 0x00000001001d7810 (libwiredtiger-10.0.1.dylib`__conn_configure_method at conn_api.c:1065)
+      is_new = 0x00000001001d7c00 (libwiredtiger-10.0.1.dylib`__conn_is_new at conn_api.c:1085)
+      open_session = 0x00000001001d7c20 (libwiredtiger-10.0.1.dylib`__conn_open_session at conn_api.c:1261)
+      query_timestamp = 0x00000001001d80f0 (libwiredtiger-10.0.1.dylib`__conn_query_timestamp at conn_api.c:1287)
+      set_timestamp = 0x00000001001d8560 (libwiredtiger-10.0.1.dylib`__conn_set_timestamp at conn_api.c:1306)
+      rollback_to_stable = 0x00000001001d89c0 (libwiredtiger-10.0.1.dylib`__conn_rollback_to_stable at conn_api.c:1325)
+      load_extension = 0x00000001001d8e70 (libwiredtiger-10.0.1.dylib`__conn_load_extension at conn_api.c:997)
+      add_data_source = 0x00000001001d9300 (libwiredtiger-10.0.1.dylib`__conn_add_data_source at conn_api.c:289)
+      add_collator = 0x00000001001d98f0 (libwiredtiger-10.0.1.dylib`__conn_add_collator at conn_api.c:121)
+      add_compressor = 0x00000001001d9f30 (libwiredtiger-10.0.1.dylib`__conn_add_compressor at conn_api.c:222)
+      add_encryptor = 0x00000001001da570 (libwiredtiger-10.0.1.dylib`__conn_add_encryptor at conn_api.c:453)
+      add_extractor = 0x00000001001dad70 (libwiredtiger-10.0.1.dylib`__conn_add_extractor at conn_api.c:547)
+      set_file_system = 0x00000001001db3b0 (libwiredtiger-10.0.1.dylib`__conn_set_file_system at conn_api.c:2279)
+      add_storage_source = 0x00000001001db850 (libwiredtiger-10.0.1.dylib`__conn_add_storage_source at conn_api.c:673)
+      get_storage_source = 0x00000001001dbf30 (libwiredtiger-10.0.1.dylib`__conn_get_storage_source at conn_api.c:715)
+      get_extension_api = 0x00000001001dc070 (libwiredtiger-10.0.1.dylib`__conn_get_extension_api at conn_api.c:801)
+    }
+    default_session = 0x0000000100881000
+    dummy_session = {
+      iface = {
+        connection = 0x0000000101808200
+        app_private = 0x0000000000000000
+        close = 0x0000000000000000
+        reconfigure = 0x0000000000000000
+        flush_tier = 0x0000000000000000
+        strerror = 0x0000000100312370 (libwiredtiger-10.0.1.dylib`__wt_session_strerror at session_api.c:1940)
+        open_cursor = 0x0000000000000000
+        alter = 0x0000000000000000
+        create = 0x0000000000000000
+        compact = 0x0000000000000000
+        drop = 0x0000000000000000
+        join = 0x0000000000000000
+        log_flush = 0x0000000000000000
+        log_printf = 0x0000000000000000
+        rename = 0x0000000000000000
+        reset = 0x0000000000000000
+        salvage = 0x0000000000000000
+        truncate = 0x0000000000000000
+        upgrade = 0x0000000000000000
+        verify = 0x0000000000000000
+        begin_transaction = 0x0000000000000000
+        commit_transaction = 0x0000000000000000
+        prepare_transaction = 0x0000000000000000
+        reset_snapshot = 0x0000000000000000
+        rollback_transaction = 0x0000000000000000
+        timestamp_transaction = 0x0000000000000000
+        query_timestamp = 0x0000000000000000
+        checkpoint = 0x0000000000000000
+        transaction_pinned_range = 0x0000000000000000
+        transaction_sync = 0x0000000000000000
+        breakpoint = 0x0000000000000000
+      }
+      event_handler = 0x00000001003b4308
+      lang_private = 0x0000000000000000
+      active = 0
+      name = 0x0000000100380af6 "wiredtiger_open"
+      lastop = 0x0000000000000000
+      id = 0
+      cache_wait_us = 0
+      operation_start_us = 0
+      operation_timeout_us = 0
+      api_call_counter = 0
+      dhandle = NULL
+      bucket_storage = NULL
+      dhandles = {
+        tqh_first = NULL
+        tqh_last = NULL
+      }
+      last_sweep = 0
+      last_epoch = (tv_sec = 0, tv_nsec = 0)
+      cursors = {
+        tqh_first = NULL
+        tqh_last = NULL
+      }
+      ncursors = 0
+      cursor_sweep_position = 0
+      cursor_sweep_countdown = 0
+      last_cursor_sweep = 0
+      bkp_cursor = NULL
+      compact = NULL
+      compact_state = WT_COMPACT_NONE
+      hs_cursor_counter = 0
+      meta_cursor = NULL
+      meta_track = 0x0000000000000000
+      meta_track_next = 0x0000000000000000
+      meta_track_sub = 0x0000000000000000
+      meta_track_alloc = 0
+      meta_track_nest = 0
+      current_rwlock = NULL
+      current_rwticket = '\0'
+      scratch = NULL
+      scratch_alloc = 0
+      scratch_cached = 0
+      err = (data = 0x0000000000000000, size = 0, mem = 0x0000000000000000, memsize = 0, flags = 0)
+      isolation = WT_ISO_READ_COMMITTED
+      txn = NULL
+      bg_sync_lsn = {
+        l = (offset = 0, file = 0)
+        file_offset = 0
+      }
+      block_manager = 0x0000000000000000
+      block_manager_cleanup = 0x0000000000000000
+      ckpt_handle = NULL
+      ckpt_handle_next = 0
+      ckpt_handle_allocated = 0
+      op_handle = NULL
+      op_handle_next = 0
+      op_handle_allocated = 0
+      reconcile = 0x0000000000000000
+      reconcile_cleanup = 0x0000000000000000
+      stat_bucket = 0
+      lock_flags = 0
+      flags = 2048
+      rnd = {
+        v = 1556651063767088053
+        x = (w = 521288629, z = 362436069)
+      }
+      cursor_cache = NULL
+      dhhash = NULL
+      generations = ([0] = 0, [1] = 0, [2] = 0, [3] = 0, [4] = 0)
+      stash = {
+        [0] = {
+          list = NULL
+          cnt = 0
+          alloc = 0
+        }
+        [1] = {
+          list = NULL
+          cnt = 0
+          alloc = 0
+        }
+        [2] = {
+          list = NULL
+          cnt = 0
+          alloc = 0
+        }
+        [3] = {
+          list = NULL
+          cnt = 0
+          alloc = 0
+        }
+        [4] = {
+          list = NULL
+          cnt = 0
+          alloc = 0
+        }
+      }
+      hazard_size = 0
+      hazard_inuse = 0
+      nhazard = 0
+      hazard = NULL
+      optrack_buf = NULL
+      optrackbuf_ptr = 0
+      optrack_offset = 0
+      optrack_fh = NULL
+      stats = {
+        bytes_read = 0
+        bytes_write = 0
+        lock_dhandle_wait = 0
+        read_time = 0
+        write_time = 0
+        lock_schema_wait = 0
+        cache_time = 0
+      }
+    }
+    cfg = 0x0000000102011c00 "buffer_alignment=-1,builtin_extension_config=,cache_cursors=true,cache_max_wait_ms=0,cache_overhead=8,cache_size=100MB,checkpoint=(log_size=0,wait=0),checkpoint_sync=true,compatibility=(release=,require_max=,require_min=),config_base=true,create=,debug_mode=(checkpoint_retention=0,corruption_abort=true,cursor_copy=false,eviction=false,log_retention=0,realloc_exact=false,rollback_error=0,slow_checkpoint=false,table_logging=false,update_restore_evict=false),direct_io=,encryption=(keyid=,name=,secretkey=),error_prefix=,eviction=(threads_max=8,threads_min=1),eviction_checkpoint_target=1,eviction_dirty_target=5,eviction_dirty_trigger=20,eviction_target=80,eviction_trigger=95,eviction_updates_target=0,eviction_updates_trigger=0,exclusive=false,extensions=,file_close_sync=true,file_extend=,file_manager=(close_handle_minimum=250,close_idle_time=30,close_scan_interval=10),hash=(buckets=512,dhandle_buckets=512),hazard_max=1000,history_store=(file_max=0),in_memory=false,io_capacity=(total=0),log=(archive=true,compressor"...
+    api_lock = {
+      lock = (__sig = 1297437786, __opaque = "")
+      name = 0x00000001003842af "api"
+      stat_count_off = -1
+      stat_app_usecs_off = -1
+      stat_int_usecs_off = -1
+      stat_session_usecs_off = 0
+      initialized = '\x01'
+    }
+    checkpoint_lock = {
+      lock = (__sig = 1297437786, __opaque = "")
+      name = 0x00000001003779f3 "checkpoint"
+      stat_count_off = 165
+      stat_app_usecs_off = 166
+      stat_int_usecs_off = 167
+      stat_session_usecs_off = 0
+      initialized = '\x01'
+    }
+    fh_lock = {
+      lock = (__sig = 1297437786, __opaque = "")
+      name = 0x00000001003868f4 "file list"
+      stat_count_off = -1
+      stat_app_usecs_off = -1
+      stat_int_usecs_off = -1
+      stat_session_usecs_off = 0
+      initialized = '\x01'
+    }
+    flush_tier_lock = {
+      lock = (__sig = 1297437786, __opaque = "")
+      name = 0x00000001003868fe "flush tier"
+      stat_count_off = -1
+      stat_app_usecs_off = -1
+      stat_int_usecs_off = -1
+      stat_session_usecs_off = 0
+      initialized = '\x01'
+    }
+    metadata_lock = {
+      lock = (__sig = 1297437786, __opaque = "")
+      name = 0x0000000100384358 "metadata"
+      stat_count_off = 176
+      stat_app_usecs_off = 177
+      stat_int_usecs_off = 178
+      stat_session_usecs_off = 0
+      initialized = '\x01'
+    }
+    reconfig_lock = {
+      lock = (__sig = 1297437786, __opaque = "")
+      name = 0x0000000100386909 "reconfigure"
+      stat_count_off = -1
+      stat_app_usecs_off = -1
+      stat_int_usecs_off = -1
+      stat_session_usecs_off = 0
+      initialized = '\x01'
+    }
+    schema_lock = {
+      lock = (__sig = 1297437786, __opaque = "")
+      name = 0x0000000100386915 "schema"
+      stat_count_off = 183
+      stat_app_usecs_off = 184
+      stat_int_usecs_off = 185
+      stat_session_usecs_off = 5
+      initialized = '\x01'
+    }
+    table_lock = {
+      u = {
+        v = 514
+        s = (current = '\x02', next = '\x02', reader = '\0', readers_queued = '\0', readers_active = 0)
+      }
+      stat_read_count_off = 188
+      stat_write_count_off = 189
+      stat_app_usecs_off = 186
+      stat_int_usecs_off = 187
+      stat_session_usecs_off = 0
+      cond_readers = 0x0000000100e044d0
+      cond_writers = 0x0000000100e04570
+    }
+    tiered_lock = {
+      lock = (__sig = 1297437786, __opaque = "")
+      name = 0x000000010038692b "tiered work unit list"
+      stat_count_off = -1
+      stat_app_usecs_off = -1
+      stat_int_usecs_off = -1
+      stat_session_usecs_off = 0
+      initialized = '\x01'
+    }
+    turtle_lock = {
+      lock = (__sig = 1297437786, __opaque = "")
+      name = 0x0000000100386941 "turtle file"
+      stat_count_off = -1
+      stat_app_usecs_off = -1
+      stat_int_usecs_off = -1
+      stat_session_usecs_off = 0
+      initialized = '\x01'
+    }
+    dhandle_lock = {
+      u = {
+        v = 2313
+        s = (current = '\t', next = '\t', reader = '\0', readers_queued = '\0', readers_active = 0)
+      }
+      stat_read_count_off = 170
+      stat_write_count_off = 171
+      stat_app_usecs_off = 168
+      stat_int_usecs_off = 169
+      stat_session_usecs_off = 2
+      cond_readers = 0x0000000100e04250
+      cond_writers = 0x0000000100e042f0
+    }
+    q = {
+      tqe_next = NULL
+      tqe_prev = 0x00000001003b4598
+    }
+    cpq = {
+      tqe_next = NULL
+      tqe_prev = NULL
+    }
+    home = 0x0000000100e04730 "/Users/sisi/Public/Xingkd/WT_HOME"
+    error_prefix = 0x0000000000000000
+    dh_hash_size = 512
+    hash_size = 512
+    is_new = 0
+    compat_major = 10
+    compat_minor = 0
+    req_max_major = 65535
+    req_max_minor = 65535
+    req_min_major = 65535
+    req_min_minor = 65535
+    extension_api = {
+      conn = NULL
+      err_printf = 0x0000000000000000
+      msg_printf = 0x0000000000000000
+      strerror = 0x0000000000000000
+      map_windows_error = 0x0000000000000000
+      scr_alloc = 0x0000000000000000
+      scr_free = 0x0000000000000000
+      collator_config = 0x0000000000000000
+      collate = 0x0000000000000000
+      config_get = 0x0000000000000000
+      config_get_string = 0x0000000000000000
+      config_parser_open = 0x0000000000000000
+      config_parser_open_arg = 0x0000000000000000
+      file_system_get = 0x0000000000000000
+      metadata_insert = 0x0000000000000000
+      metadata_remove = 0x0000000000000000
+      metadata_search = 0x0000000000000000
+      metadata_update = 0x0000000000000000
+      struct_pack = 0x0000000000000000
+      struct_size = 0x0000000000000000
+      struct_unpack = 0x0000000000000000
+      pack_start = 0x0000000000000000
+      unpack_start = 0x0000000000000000
+      pack_close = 0x0000000000000000
+      pack_item = 0x0000000000000000
+      pack_int = 0x0000000000000000
+      pack_str = 0x0000000000000000
+      pack_uint = 0x0000000000000000
+      unpack_item = 0x0000000000000000
+      unpack_int = 0x0000000000000000
+      unpack_str = 0x0000000000000000
+      unpack_uint = 0x0000000000000000
+      transaction_id = 0x0000000000000000
+      transaction_isolation_level = 0x0000000000000000
+      transaction_notify = 0x0000000000000000
+      transaction_oldest = 0x0000000000000000
+      transaction_visible = 0x0000000000000000
+      version = 0x0000000000000000
+      spin_init = 0x0000000000000000
+      spin_destroy = 0x0000000000000000
+      spin_lock = 0x0000000000000000
+      spin_unlock = 0x0000000000000000
+    }
+    config_entries = 0x0000000100e04080
+    operation_timeout_us = 0
+    optrack_path = 0x0000000100e05d60 "."
+    optrack_map_fh = NULL
+    optrack_map_spinlock = {
+      lock = (__sig = 0, __opaque = "")
+      name = 0x0000000000000000
+      stat_count_off = 0
+      stat_app_usecs_off = 0
+      stat_int_usecs_off = 0
+      stat_session_usecs_off = 0
+      initialized = '\0'
+    }
+    optrack_pid = 0
+    foc = 0x0000000000000000
+    foc_cnt = 0
+    foc_size = 0
+    lock_fh = 0x0000000100e047b0
+    dhhash = 0x000000010200d200
+    dhqh = {
+      tqh_first = 0x0000000100a08100
+      tqh_last = 0x0000000100e04f28
+    }
+    dlhqh = {
+      tqh_first = NULL
+      tqh_last = 0x0000000101808c50
+    }
+    fhhash = 0x000000010200a200
+    fhqh = {
+      tqh_first = 0x0000000100908150
+      tqh_last = 0x0000000100e047d0
+    }
+    lsmqh = {
+      tqh_first = NULL
+      tqh_last = 0x0000000101808c78
+    }
+    tieredqh = {
+      tqh_first = NULL
+      tqh_last = 0x0000000101808c88
+    }
+    block_lock = {
+      lock = (__sig = 1297437786, __opaque = "")
+      name = 0x0000000100378775 "block manager"
+      stat_count_off = -1
+      stat_app_usecs_off = -1
+      stat_int_usecs_off = -1
+      stat_session_usecs_off = 0
+      initialized = '\x01'
+    }
+    blockhash = 0x0000000102008200
+    blockqh = {
+      tqh_first = 0x000000010101c400
+      tqh_last = 0x000000010100a420
+    }
+    dh_bucket_count = 0x000000010200c200
+    dhandle_count = 3
+    open_btree_count = 2
+    next_file_id = 2
+    open_file_count = 3
+    open_cursor_count = 4
+    sessions = 0x0000000100881000
+    session_size = 132
+    session_cnt = 14
+    session_scratch_max = 2097152
+    cache = 0x0000000102016400
+    cache_size = 104857600
+    txn_global = {
+      current = 2
+      last_running = 2
+      oldest_id = 2
+      durable_timestamp = 0
+      last_ckpt_timestamp = 0
+      meta_ckpt_timestamp = 0
+      oldest_timestamp = 0
+      pinned_timestamp = 0
+      recovery_timestamp = 0
+      stable_timestamp = 0
+      has_durable_timestamp = false
+      has_oldest_timestamp = false
+      has_pinned_timestamp = false
+      has_stable_timestamp = false
+      oldest_is_pinned = false
+      stable_is_pinned = false
+      rwlock = {
+        u = {
+          v = 514
+          s = (current = '\x02', next = '\x02', reader = '\0', readers_queued = '\0', readers_active = 0)
+        }
+        stat_read_count_off = 192
+        stat_write_count_off = 193
+        stat_app_usecs_off = 190
+        stat_int_usecs_off = 191
+        stat_session_usecs_off = 0
+        cond_readers = 0x0000000100e04a40
+        cond_writers = 0x0000000100e04cd0
+      }
+      visibility_rwlock = {
+        u = {
+          v = 0
+          s = (current = '\0', next = '\0', reader = '\0', readers_queued = '\0', readers_active = 0)
+        }
+        stat_read_count_off = -1
+        stat_write_count_off = -1
+        stat_app_usecs_off = -1
+        stat_int_usecs_off = -1
+        stat_session_usecs_off = 0
+        cond_readers = 0x0000000100e04d70
+        cond_writers = 0x0000000100e04e10
+      }
+      checkpoint_running = false
+      checkpoint_running_hs = false
+      checkpoint_id = 0
+      checkpoint_txn_shared = {
+         = {
+           = {
+            id = 0
+            pinned_id = 0
+            metadata_pinned = 0
+            pinned_durable_timestamp = 0
+            read_timestamp = 0
+            is_allocating = '\0'
+          }
+          __padding = ""
+        }
+      }
+      checkpoint_timestamp = 0
+      debug_ops = 0
+      debug_rollback = 0
+      metadata_pinned = 2
+      txn_shared_list = 0x0000000102022a00
+    }
+    recovery_ckpt_snap_min = 3
+    recovery_ckpt_snap_max = 3
+    recovery_ckpt_snapshot = 0x0000000000000000
+    recovery_ckpt_snapshot_count = 0
+    hot_backup_lock = {
+      u = {
+        v = 0
+        s = (current = '\0', next = '\0', reader = '\0', readers_queued = '\0', readers_active = 0)
+      }
+      stat_read_count_off = -1
+      stat_write_count_off = -1
+      stat_app_usecs_off = -1
+      stat_int_usecs_off = -1
+      stat_session_usecs_off = 0
+      cond_readers = 0x0000000100e04390
+      cond_writers = 0x0000000100e04430
+    }
+    hot_backup_start = 0
+    hot_backup_list = 0x0000000000000000
+    ckpt_session = NULL
+    ckpt_tid = {
+      created = false
+      id = NULL
+    }
+    ckpt_tid_set = false
+    ckpt_cond = NULL
+    ckpt_most_recent = 1624543426
+    ckpt_logsize = 0
+    ckpt_signalled = false
+    ckpt_apply = 1
+    ckpt_apply_time = 3
+    ckpt_skip = 0
+    ckpt_skip_time = 0
+    ckpt_usecs = 0
+    ckpt_prep_max = 0
+    ckpt_prep_min = 0
+    ckpt_prep_recent = 0
+    ckpt_prep_total = 0
+    ckpt_time_max = 22
+    ckpt_time_min = 22
+    ckpt_time_recent = 22
+    ckpt_time_total = 22
+    ckpt_prep_end = (tv_sec = 1624543426, tv_nsec = 755741000)
+    ckpt_prep_start = (tv_sec = 1624543426, tv_nsec = 755724000)
+    ckpt_timer_start = (tv_sec = 0, tv_nsec = 755722000)
+    ckpt_timer_scrub_end = (tv_sec = 1624543426, tv_nsec = 755723000)
+    ckpt_progress_msg_count = 0
+    ckpt_write_bytes = 5793
+    ckpt_write_pages = 2
+    incr_granularity = 0
+    incr_backups = {
+      [0] = (id_str = 0x0000000000000000, granularity = 0, flags = 0)
+      [1] = (id_str = 0x0000000000000000, granularity = 0, flags = 0)
+    }
+    base_write_gen = 21
+    last_ckpt_base_write_gen = 13
+    stat_flags = 0
+    rec_maximum_seconds = 0
+    stats = {
+      [0] = 0x000000010086b000
+      [1] = 0x000000010086bf08
+      [2] = 0x000000010086ce10
+      [3] = 0x000000010086dd18
+      [4] = 0x000000010086ec20
+      [5] = 0x000000010086fb28
+      [6] = 0x0000000100870a30
+      [7] = 0x0000000100871938
+      [8] = 0x0000000100872840
+      [9] = 0x0000000100873748
+      [10] = 0x0000000100874650
+      [11] = 0x0000000100875558
+      [12] = 0x0000000100876460
+      [13] = 0x0000000100877368
+      [14] = 0x0000000100878270
+      [15] = 0x0000000100879178
+      [16] = 0x000000010087a080
+      [17] = 0x000000010087af88
+      [18] = 0x000000010087be90
+      [19] = 0x000000010087cd98
+      [20] = 0x000000010087dca0
+      [21] = 0x000000010087eba8
+      [22] = 0x000000010087fab0
+    }
+    stat_array = 0x000000010086b000
+    capacity = {
+      ckpt = 0
+      evict = 0
+      log = 0
+      read = 0
+      total = 0
+      threshold = 0
+      written = 0
+      signalled = false
+      reservation_ckpt = 0
+      reservation_evict = 0
+      reservation_log = 0
+      reservation_read = 0
+      reservation_total = 0
+    }
+    capacity_session = NULL
+    capacity_tid = {
+      created = false
+      id = NULL
+    }
+    capacity_tid_set = false
+    capacity_cond = NULL
+    lsm_manager = {
+      switchqh = {
+        tqh_first = NULL
+        tqh_last = 0x0000000101809168
+      }
+      appqh = {
+        tqh_first = NULL
+        tqh_last = 0x0000000101809178
+      }
+      managerqh = {
+        tqh_first = NULL
+        tqh_last = 0x0000000101809188
+      }
+      switch_lock = {
+        lock = (__sig = 1297437786, __opaque = "")
+        name = 0x000000010038697f "LSM switch queue lock"
+        stat_count_off = -1
+        stat_app_usecs_off = -1
+        stat_int_usecs_off = -1
+        stat_session_usecs_off = 0
+        initialized = '\x01'
+      }
+      app_lock = {
+        lock = (__sig = 1297437786, __opaque = "")
+        name = 0x000000010038694d "LSM application queue lock"
+        stat_count_off = -1
+        stat_app_usecs_off = -1
+        stat_int_usecs_off = -1
+        stat_session_usecs_off = 0
+        initialized = '\x01'
+      }
+      manager_lock = {
+        lock = (__sig = 1297437786, __opaque = "")
+        name = 0x0000000100386968 "LSM manager queue lock"
+        stat_count_off = -1
+        stat_app_usecs_off = -1
+        stat_int_usecs_off = -1
+        stat_session_usecs_off = 0
+        initialized = '\x01'
+      }
+      work_cond = 0x0000000100e04610
+      lsm_workers = 0
+      lsm_workers_max = 4
+      lsm_worker_cookies = {
+        [0] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [1] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [2] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [3] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [4] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [5] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [6] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [7] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [8] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [9] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [10] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [11] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [12] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [13] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [14] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [15] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [16] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [17] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [18] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+        [19] = {
+          session = NULL
+          work_cond = NULL
+          tid = {
+            created = false
+            id = NULL
+          }
+          tid_set = false
+          id = 0
+          type = 0
+          running = false
+        }
+      }
+      flags = 0
+    }
+    bstorage = NULL
+    bstorage_none = {
+      bucket = 0x0000000000000000
+      bucket_prefix = 0x0000000000000000
+      owned = 0
+      object_size = 0
+      retain_secs = 0
+      auth_token = 0x0000000000000000
+      file_system = NULL
+      storage_source = NULL
+      hashq = {
+        tqe_next = NULL
+        tqe_prev = NULL
+      }
+      q = {
+        tqe_next = NULL
+        tqe_prev = NULL
+      }
+      flags = 0
+    }
+    kencryptor = NULL
+    evict_server_running = true
+    evict_threads = {
+      alloc = 8
+      max = 8
+      min = 1
+      current_threads = 1
+      name = 0x000000010038b71e "eviction-server"
+      lock = {
+        u = {
+          v = 514
+          s = (current = '\x02', next = '\x02', reader = '\0', readers_queued = '\0', readers_active = 0)
+        }
+        stat_read_count_off = -1
+        stat_write_count_off = -1
+        stat_app_usecs_off = -1
+        stat_int_usecs_off = -1
+        stat_session_usecs_off = 0
+        cond_readers = 0x0000000100a08540
+        cond_writers = 0x0000000100a085e0
+      }
+      wait_cond = 0x0000000100a086b0
+      threads = 0x0000000100a04600
+      chk_func = 0x000000010025e3c0 (libwiredtiger-10.0.1.dylib`__wt_evict_thread_chk at evict_lru.c:260)
+      run_func = 0x000000010025e3f0 (libwiredtiger-10.0.1.dylib`__wt_evict_thread_run at evict_lru.c:271)
+      stop_func = 0x000000010025ed20 (libwiredtiger-10.0.1.dylib`__wt_evict_thread_stop at evict_lru.c:335)
+    }
+    evict_threads_max = 8
+    evict_threads_min = 1
+    stat_session = NULL
+    stat_tid = {
+      created = false
+      id = NULL
+    }
+    stat_tid_set = false
+    stat_cond = NULL
+    stat_format = 0x0000000100905b30 "%b %d %H:%M:%S"
+    stat_fs = NULL
+    stat_json_tables = false
+    stat_path = 0x0000000100905af0 "/Users/sisi/Public/Xingkd/WT_HOME/./WiredTigerStat.%d.%H"
+    stat_sources = 0x0000000000000000
+    stat_stamp = 0x0000000000000000
+    stat_usecs = 0
+    tiered_retention = 0
+    tiered_session = 0x00000001008817c0
+    tiered_tid = {
+      created = true
+      id = 0x00007000065c1000
+    }
+    tiered_tid_set = true
+    flush_cond = 0x0000000100905f40
+    tiered_cond = 0x00000001009060e0
+    tiered_server_running = false
+    flush_state = 0
+    tiered_mgr = (wait_usecs = 0, workers = 0, workers_max = 8, workers_min = 1, flags = 0)
+    tiered_mgr_session = NULL
+    tiered_mgr_tid = {
+      created = false
+      id = NULL
+    }
+    tiered_mgr_tid_set = false
+    tiered_mgr_cond = NULL
+    tiered_threads_max = 0
+    tiered_threads_min = 0
+    log_flags = 256
+    log_cond = NULL
+    log_session = NULL
+    log_tid = {
+      created = false
+      id = NULL
+    }
+    log_tid_set = false
+    log_file_cond = NULL
+    log_file_session = NULL
+    log_file_tid = {
+      created = false
+      id = NULL
+    }
+    log_file_tid_set = false
+    log_wrlsn_cond = NULL
+    log_wrlsn_session = NULL
+    log_wrlsn_tid = {
+      created = false
+      id = NULL
+    }
+    log_wrlsn_tid_set = false
+    log = NULL
+    log_compressor = NULL
+    log_cursors = 0
+    log_dirty_max = 0
+    log_file_max = 0
+    log_path = 0x0000000100e04b10 "."
+    log_prealloc = 0
+    log_req_max = 0
+    log_req_min = 0
+    txn_logsync = 0
+    meta_ckpt_session = 0x0000000100881ba0
+    modified = true
+    sweep_session = 0x0000000100883e80
+    sweep_tid = {
+      created = true
+      id = 0x0000700006a5c000
+    }
+    sweep_tid_set = 1
+    sweep_cond = 0x0000000100a091f0
+    sweep_idle_time = 30
+    sweep_interval = 10
+    sweep_handles_min = 250
+    stable_rollback_maxfile = 3
+    collqh = {
+      tqh_first = NULL
+      tqh_last = 0x0000000101809968
+    }
+    compqh = {
+      tqh_first = NULL
+      tqh_last = 0x0000000101809978
+    }
+    dsrcqh = {
+      tqh_first = NULL
+      tqh_last = 0x0000000101809988
+    }
+    encryptor_lock = {
+      lock = (__sig = 1297437786, __opaque = "")
+      name = 0x00000001003868ea "encryptor"
+      stat_count_off = -1
+      stat_app_usecs_off = -1
+      stat_int_usecs_off = -1
+      stat_session_usecs_off = 0
+      initialized = '\x01'
+    }
+    encryptqh = {
+      tqh_first = NULL
+      tqh_last = 0x00000001018099f0
+    }
+    extractorqh = {
+      tqh_first = NULL
+      tqh_last = 0x0000000101809a00
+    }
+    storage_lock = {
+      lock = (__sig = 1297437786, __opaque = "")
+      name = 0x000000010038691c "tiered storage"
+      stat_count_off = -1
+      stat_app_usecs_off = -1
+      stat_int_usecs_off = -1
+      stat_session_usecs_off = 0
+      initialized = '\x01'
+    }
+    storagesrcqh = {
+      tqh_first = NULL
+      tqh_last = 0x0000000101809a68
+    }
+    lang_private = 0x0000000000000000
+    buffer_alignment = 0
+    stashed_bytes = 0
+    stashed_objects = 0
+    generations = ([0] = 2, [1] = 2, [2] = 2, [3] = 1, [4] = 1)
+    data_extend_len = 0
+    log_extend_len = -1
+    direct_io = 0
+    write_through = 0
+    mmap = true
+    mmap_all = false
+    page_size = 4096
+    debug_ckpt = NULL
+    debug_ckpt_alloc = 0
+    debug_ckpt_cnt = 0
+    debug_log_cnt = 0
+    debug_flags = 2
+    verbose = 0
+    timing_stress_flags = 0
+    wt_stderr = {
+      name = 0x0000000100390324 "stderr"
+      fp = 0x00007fff8060a240
+      fh = NULL
+      off = 0
+      size = 0
+      buf = (data = 0x0000000000000000, size = 0, mem = 0x0000000000000000, memsize = 0, flags = 0)
+      flags = 0
+      close = 0x00000001002baf50 (libwiredtiger-10.0.1.dylib`__stdio_close at os_fstream_stdio.c:17)
+      fstr_flush = 0x00000001002bafa0 (libwiredtiger-10.0.1.dylib`__stdio_flush at os_fstream_stdio.c:27)
+      fstr_getline = 0x00000001002bb020 (libwiredtiger-10.0.1.dylib`__stdio_getline at os_fstream_stdio.c:39)
+      fstr_printf = 0x00000001002bb080 (libwiredtiger-10.0.1.dylib`__stdio_printf at os_fstream_stdio.c:50)
+    }
+    wt_stdout = {
+      name = 0x000000010039032b "stdout"
+      fp = 0x00007fff8060a1a8
+      fh = NULL
+      off = 0
+      size = 0
+      buf = (data = 0x0000000000000000, size = 0, mem = 0x0000000000000000, memsize = 0, flags = 0)
+      flags = 0
+      close = 0x00000001002baf50 (libwiredtiger-10.0.1.dylib`__stdio_close at os_fstream_stdio.c:17)
+      fstr_flush = 0x00000001002bafa0 (libwiredtiger-10.0.1.dylib`__stdio_flush at os_fstream_stdio.c:27)
+      fstr_getline = 0x00000001002bb020 (libwiredtiger-10.0.1.dylib`__stdio_getline at os_fstream_stdio.c:39)
+      fstr_printf = 0x00000001002bb080 (libwiredtiger-10.0.1.dylib`__stdio_printf at os_fstream_stdio.c:50)
+    }
+    file_system = 0x0000000100e04760
+    server_flags = 96
+    flags = 36361
+  }
+  

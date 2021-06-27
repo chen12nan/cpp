@@ -8,26 +8,13 @@
 int main(int argc, char *argv[])
 {
     std::cout << "Hello WiredTiger1" << std::endl;
-    const char *home = "/Users/sisi/Public/Xingkd/WT_HOME";
+    const char *home = "/Users/sisi/Public/Xingkd/learn_wt/cpp/build/WT_HOME";
     /*! [access example connection] */
     WT_CONNECTION *conn;
     WT_CURSOR *cursor;
     WT_SESSION *session;
     const char *key, *value;
     int ret;
-
-    bson_t *b = bson_new();
-    BSON_APPEND_BOOL(b, "k_bool", false);
-    BSON_APPEND_INT32(b, "k_in32", 23);
-    BSON_APPEND_DOUBLE(b, "k_double", 3.44);
-    BSON_APPEND_UTF8(b, "k_utf8", "test_bson");
-    
-    bson_oid_t oid;
-    bson_oid_init(&oid, nullptr);
-
-    char str[25];
-    bson_oid_to_string(&oid, str);
-    std::cout<<"oid = "<<str<<std::endl;
 
     
     /* Open a connection to the database, creating it if necessary. */
@@ -56,28 +43,48 @@ int main(int argc, char *argv[])
     // }
     /*! [access example cursor insert] */
 
-    WT_ITEM kitem;
-    kitem.data = oid.bytes;
-    kitem.size = 12;
-    
-    WT_ITEM vitem;
-    vitem.data = static_cast<const void*>(bson_get_data(b));
-    vitem.size = b->len;
+    for (int i = 0; i < 3; i ++) {
+        break;
+        bson_t *b = bson_new();
+        BSON_APPEND_BOOL(b, "k_bool", false);
+        BSON_APPEND_INT32(b, "k_in32", i);
+        BSON_APPEND_DOUBLE(b, "k_double", 3.44);
+        BSON_APPEND_UTF8(b, "k_utf8", "test_bson");
+        
+        bson_oid_t oid;
+        bson_oid_init(&oid, nullptr);
 
-    std::cout<<"kitem size = "<<kitem.size<<std::endl;
-    cursor->set_key(cursor, &kitem);
-    cursor->set_value(cursor, &vitem);
-    cursor->insert(cursor);
+        char str[25];
+        bson_oid_to_string(&oid, str);
+        std::cout<<"generate id = "<<str<<std::endl;
+        WT_ITEM kitem;
+        kitem.data = oid.bytes;
+        kitem.size = 12;
+        
+        WT_ITEM vitem;
+        vitem.data = static_cast<const void*>(bson_get_data(b));
+        vitem.size = b->len;
 
+        std::cout<<"kitem size = "<<kitem.size<<std::endl;
+        cursor->set_key(cursor, &kitem);
+        cursor->set_value(cursor, &vitem);
+        cursor->insert(cursor);
+        bson_free(b);
+    }
 
     // /*! [access example cursor list] */
     error_check(cursor->reset(cursor)); /* Restart the scan. */
-    while ((ret = cursor->next(cursor)) == 0)
+    WT_CURSOR* get_cur;
+    error_check(session->open_cursor(session, "table:bison", NULL, NULL, &get_cur));
+    get_cur->reset(get_cur);
+
+    while ((ret = get_cur->next(get_cur)) == 0)
     {
         WT_ITEM val;
-        
-        error_check(cursor->get_key(cursor, &kitem));
-        error_check(cursor->get_value(cursor, &val));
+        WT_ITEM kitem;
+        char str[25];
+        error_check(get_cur->get_key(get_cur, &kitem));
+        error_check(get_cur->get_value(get_cur, &val));
         bson_oid_t dt;
         bson_oid_init_from_data(&dt, (uint8_t*)(kitem.data));
         bson_oid_to_string(&dt, str);
@@ -85,12 +92,51 @@ int main(int argc, char *argv[])
         uint8_t* data = reinterpret_cast<uint8_t*>(const_cast<void*>(val.data));
         bson_t *tb = bson_new_from_data(data, val.size);
 
-        std::cout<<"oid = "<<str<<std::endl;
+        std::cout<<"get oid = "<<str<<std::endl;
         std::cout<<"value = "<<bson_as_json(tb, nullptr)<<std::endl;
     }
 
     // scan_end_check(ret == WT_NOTFOUND); /* Check for end-of-table. */
     /*! [access example cursor list] */
+
+    error_check(session->create(session, "table:order_test", "key_format=i,value_format=u"));
+    WT_CURSOR *order_cur;
+    session->open_cursor(session, "table:order_test", nullptr, nullptr, &order_cur);
+    for (int i = i; i < 20; i++) {
+        int x = rand()%10;
+        std::cout<<"x = "<<x<<std::endl;
+        order_cur->set_key(order_cur, x);
+        bson_t *b = bson_new();
+        BSON_APPEND_BOOL(b, "k_bool", false);
+        BSON_APPEND_INT32(b, "k_in32", 10009);
+        BSON_APPEND_DOUBLE(b, "k_double", 3.44);
+        BSON_APPEND_UTF8(b, "k_utf8", "test_bson");
+        WT_ITEM vitem;
+        vitem.data = static_cast<const void*>(bson_get_data(b));
+        vitem.size = b->len;
+        order_cur->set_value(order_cur, &vitem);
+        order_cur->insert(order_cur);
+
+        order_cur->set_key(order_cur, 2);
+        order_cur->set_value(order_cur, &vitem);
+        order_cur->insert(order_cur);
+    }
+
+    while ((ret = order_cur->next(order_cur)) == 0)
+    {
+        WT_ITEM val;
+        WT_ITEM kitem;
+        int i = -1;
+        error_check(order_cur->get_key(order_cur, &i));
+        error_check(order_cur->get_value(order_cur, &val));
+
+        uint8_t* data = reinterpret_cast<uint8_t*>(const_cast<void*>(val.data));
+        bson_t *tb = bson_new_from_data(data, val.size);
+
+        std::cout<<"order i = "<<i<<std::endl;
+        std::cout<<"value = "<<bson_as_json(tb, nullptr)<<std::endl;
+    }
+
 
     /*! [access example close] */
     error_check(conn->close(conn, NULL)); /* Close all handles. */

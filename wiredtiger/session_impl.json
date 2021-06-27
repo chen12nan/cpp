@@ -1,0 +1,147 @@
+(WT_SESSION_IMPL) $3 = {
+    iface = {
+      connection = 0x0000000101808200
+      app_private = 0x0000000000000000
+      close = 0x0000000100313300 (libwiredtiger-10.0.1.dylib`__session_close at session_api.c:267)
+      reconfigure = 0x00000001003137c0 (libwiredtiger-10.0.1.dylib`__session_reconfigure at session_api.c:383)
+      flush_tier = 0x0000000100313f00 (libwiredtiger-10.0.1.dylib`__session_flush_tier at session_api.c:1954)
+      strerror = 0x0000000100312370 (libwiredtiger-10.0.1.dylib`__wt_session_strerror at session_api.c:1940)
+      open_cursor = 0x0000000100311860 (libwiredtiger-10.0.1.dylib`__session_open_cursor at session_api.c:571)
+      alter = 0x00000001003142a0 (libwiredtiger-10.0.1.dylib`__session_alter at session_api.c:647)
+      create = 0x0000000100314b00 (libwiredtiger-10.0.1.dylib`__session_create at session_api.c:721)
+      compact = 0x0000000100322c50 (libwiredtiger-10.0.1.dylib`__wt_session_compact at session_compact.c:329)
+      drop = 0x0000000100315320 (libwiredtiger-10.0.1.dylib`__session_drop at session_api.c:978)
+      join = 0x0000000100316750 (libwiredtiger-10.0.1.dylib`__session_join at session_api.c:1058)
+      log_flush = 0x00000001003179b0 (libwiredtiger-10.0.1.dylib`__session_log_flush at session_api.c:791)
+      log_printf = 0x0000000100318100 (libwiredtiger-10.0.1.dylib`__session_log_printf at session_api.c:850)
+      rename = 0x0000000100318620 (libwiredtiger-10.0.1.dylib`__session_rename at session_api.c:893)
+      reset = 0x0000000100319100 (libwiredtiger-10.0.1.dylib`__session_reset at session_api.c:945)
+      salvage = 0x0000000100319740 (libwiredtiger-10.0.1.dylib`__session_salvage at session_api.c:1182)
+      truncate = 0x0000000100319fb0 (libwiredtiger-10.0.1.dylib`__session_truncate at session_api.c:1355)
+      upgrade = 0x000000010031ac80 (libwiredtiger-10.0.1.dylib`__session_upgrade at session_api.c:1443)
+      verify = 0x000000010031b440 (libwiredtiger-10.0.1.dylib`__session_verify at session_api.c:1490)
+      begin_transaction = 0x000000010031bcd0 (libwiredtiger-10.0.1.dylib`__session_begin_transaction at session_api.c:1518)
+      commit_transaction = 0x000000010031c290 (libwiredtiger-10.0.1.dylib`__session_commit_transaction at session_api.c:1540)
+      prepare_transaction = 0x000000010031cac0 (libwiredtiger-10.0.1.dylib`__session_prepare_transaction at session_api.c:1596)
+      reset_snapshot = 0x000000010031d110 (libwiredtiger-10.0.1.dylib`__session_reset_snapshot at session_api.c:1715)
+      rollback_transaction = 0x000000010030fac0 (libwiredtiger-10.0.1.dylib`__session_rollback_transaction at session_api.c:1641)
+      timestamp_transaction = 0x000000010031d1f0 (libwiredtiger-10.0.1.dylib`__session_timestamp_transaction at session_api.c:1674)
+      query_timestamp = 0x000000010031d600 (libwiredtiger-10.0.1.dylib`__session_query_timestamp at session_api.c:1697)
+      checkpoint = 0x000000010031da60 (libwiredtiger-10.0.1.dylib`__session_checkpoint at session_api.c:1880)
+      transaction_pinned_range = 0x000000010031e0e0 (libwiredtiger-10.0.1.dylib`__session_transaction_pinned_range at session_api.c:1740)
+      transaction_sync = 0x000000010031e620 (libwiredtiger-10.0.1.dylib`__session_transaction_sync at session_api.c:1786)
+      breakpoint = 0x00000001003123a0 (libwiredtiger-10.0.1.dylib`__wt_session_breakpoint at session_api.c:1971)
+    }
+    event_handler = 0x00000001003b4308
+    lang_private = 0x0000000000000000
+    active = 1
+    name = 0x000000010037eb7d "WT_SESSION.open_cursor"
+    lastop = 0x000000010037eb7d "WT_SESSION.open_cursor"
+    id = 13
+    cache_wait_us = 0
+    operation_start_us = 0
+    operation_timeout_us = 0
+    api_call_counter = 1
+    dhandle = NULL
+    bucket_storage = NULL
+    dhandles = {
+      tqh_first = 0x0000000100906560
+      tqh_last = 0x0000000100906568
+    }
+    last_sweep = 1624543426
+    last_epoch = (tv_sec = 1624543426, tv_nsec = 782448000)
+    cursors = {
+      tqh_first = 0x00000001009093e0
+      tqh_last = 0x00000001009094a8
+    }
+    ncursors = 0
+    cursor_sweep_position = 0
+    cursor_sweep_countdown = 40
+    last_cursor_sweep = 0
+    bkp_cursor = NULL
+    compact = NULL
+    compact_state = WT_COMPACT_NONE
+    hs_cursor_counter = 0
+    meta_cursor = 0x00000001009093e0
+    meta_track = 0x0000000100907ac0
+    meta_track_next = 0x0000000000000000
+    meta_track_sub = 0x0000000000000000
+    meta_track_alloc = 800
+    meta_track_nest = 0
+    current_rwlock = NULL
+    current_rwticket = '\0'
+    scratch = NULL
+    scratch_alloc = 0
+    scratch_cached = 0
+    err = (data = 0x0000000000000000, size = 0, mem = 0x0000000000000000, memsize = 0, flags = 0)
+    isolation = WT_ISO_SNAPSHOT
+    txn = 0x0000000101009e00
+    bg_sync_lsn = {
+      l = (offset = 0, file = 0)
+      file_offset = 0
+    }
+    block_manager = 0x0000000000000000
+    block_manager_cleanup = 0x0000000000000000
+    ckpt_handle = NULL
+    ckpt_handle_next = 0
+    ckpt_handle_allocated = 0
+    op_handle = NULL
+    op_handle_next = 0
+    op_handle_allocated = 0
+    reconcile = 0x0000000000000000
+    reconcile_cleanup = 0x0000000000000000
+    stat_bucket = 13
+    lock_flags = 0
+    flags = 4
+    rnd = {
+      v = 1556651063767088053
+      x = (w = 521288629, z = 362436069)
+    }
+    cursor_cache = 0x0000000101045200
+    dhhash = 0x0000000101047200
+    generations = ([0] = 0, [1] = 0, [2] = 0, [3] = 0, [4] = 0)
+    stash = {
+      [0] = {
+        list = NULL
+        cnt = 0
+        alloc = 0
+      }
+      [1] = {
+        list = NULL
+        cnt = 0
+        alloc = 0
+      }
+      [2] = {
+        list = NULL
+        cnt = 0
+        alloc = 0
+      }
+      [3] = {
+        list = NULL
+        cnt = 0
+        alloc = 0
+      }
+      [4] = {
+        list = NULL
+        cnt = 0
+        alloc = 0
+      }
+    }
+    hazard_size = 250
+    hazard_inuse = 0
+    nhazard = 0
+    hazard = 0x0000000101014c00
+    optrack_buf = NULL
+    optrackbuf_ptr = 0
+    optrack_offset = 0
+    optrack_fh = NULL
+    stats = {
+      bytes_read = 0
+      bytes_write = 0
+      lock_dhandle_wait = 0
+      read_time = 0
+      write_time = 0
+      lock_schema_wait = 0
+      cache_time = 0
+    }
+  }
