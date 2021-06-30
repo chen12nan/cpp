@@ -28,11 +28,19 @@ int main(int argc, char *argv[])
     error_check(session->create(session, "table:bison", "key_format=u,value_format=u"));
     /*! [access example table create] */
 
+    session->create(session, "config:_test_config", "key_format=u, value_format=u");
+
+    session->create(session, "index:_test_index", "key_format=u, value_format=u");
+    session->create(session, "join:_test_join", "key_format=u, value_format=u");
+    session->create(session, "log:_test_log", "key_format=u, value_format=u");
+    session->create(session, "statistics:_test_statistics", "key_format=u, value_format=u");
+
     /*! [access example cursor open] */
     error_check(session->open_cursor(session, "table:bison", NULL, NULL, &cursor));
     // error_check(session->open_cursor(session, "index:access:key", NULL, NULL, &cursor));
     /*! [access example cursor open] */
 
+    
     /*! [access example cursor insert] */
     // for (int i = 0; i < 1000000; i++) {
     //     std::string id = "key_" + std::to_string(i);
@@ -102,15 +110,15 @@ int main(int argc, char *argv[])
     error_check(session->create(session, "table:order_test", "key_format=i,value_format=u"));
     WT_CURSOR *order_cur;
     session->open_cursor(session, "table:order_test", nullptr, nullptr, &order_cur);
-    for (int i = i; i < 20; i++) {
-        int x = rand()%10;
+    for (int i = i; i < 2000000; i++) {
+        int x = rand()%2000000;
         std::cout<<"x = "<<x<<std::endl;
         order_cur->set_key(order_cur, x);
         bson_t *b = bson_new();
         BSON_APPEND_BOOL(b, "k_bool", false);
         BSON_APPEND_INT32(b, "k_in32", 10009);
         BSON_APPEND_DOUBLE(b, "k_double", 3.44);
-        BSON_APPEND_UTF8(b, "k_utf8", "test_bson");
+        BSON_APPEND_UTF8(b, "k_utf8", "test_bsonadsfasdfsadfdasfasdfsdfdsafdsafdsafsdfdsaffffsafd");
         WT_ITEM vitem;
         vitem.data = static_cast<const void*>(bson_get_data(b));
         vitem.size = b->len;
@@ -134,7 +142,7 @@ int main(int argc, char *argv[])
         bson_t *tb = bson_new_from_data(data, val.size);
 
         std::cout<<"order i = "<<i<<std::endl;
-        std::cout<<"value = "<<bson_as_json(tb, nullptr)<<std::endl;
+        // std::cout<<"value = "<<bson_as_json(tb, nullptr)<<std::endl;
     }
 
 
